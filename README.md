@@ -45,11 +45,11 @@ The complete open-source repository is available on GitHub:
 
 
 
-## 📩 Implementare Instituțională & Consultanță
+## 📩 Institutional Implementation & Consulting
 
-> Doriți să implementați hub-ul **ARTE-NET** în orașul dumneavoastră sau să derulați o campanie de tokenizare pentru o instituție culturală? Echipa noastră oferă servicii complete de consultanță, integrare tehnică personalizată și asistență legislativă. 
+Would you like to implement the ARTE-NET hub in your city or launch a tokenization campaign for a cultural institution? Our team provides comprehensive consulting services, customized technical integration, and legal/regulatory support.
 
-Pentru parteneriate și servicii la cheie:
+For partnerships and turnkey services:
 * **Email:** marcelcluj@gmail.com
 * **GitHub Sponsors / Sustenabilitate:** [paypal.me/marcelcluj](https://paypal.me/marcelcluj)
 
