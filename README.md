@@ -99,6 +99,9 @@ class ArtTokenizationGateway:
 gateway = ArtTokenizationGateway("ART-2026-001", "Sculptură Neolitică Modernă", 5000.0)
 print(gateway.mint_fractional_tokens())
 
+```
+
+
 👉 GitHub Repository: arte-net-global/municipal-cultural-hub
 
 
