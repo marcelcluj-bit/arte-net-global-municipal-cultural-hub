@@ -41,6 +41,64 @@ ARTE-NET is designed as a fully autonomous, open-source deployable framework. It
 To ensure any municipality, local council, or cultural collective across the globe can deploy this infrastructure instantly, the entire platform backend, smart contract templates, and frontend UI have been open-sourced under the MIT License.
 The complete open-source repository is available on GitHub:
 
+## 🪙 Tokenization Architecture & Smart Contract Workflow
+
+ARTE-NET bridges physical art assets with decentralized liquidity through ERC-3643 / ERC-1155 compliant fractional tokenization.
+
+[ Physical Artwork in Hub ] ──► [ Curation & Legal Escrow ] ──► [ Minting Fractional Tokens ] ──► [ Global Auction & Royalty Redistribution ]
+
+### 1. Concise Value Proposition for Investors
+* **Fractional Ownership:** Investors can acquire low-cost shares (tokens) in high-value emerging art assets.
+* **Secondary Market Liquidity:** Instantly trade artwork shares without waiting years for traditional auction sales.
+* **Automated Royalties:** Smart contracts automatically route resale commissions directly to creators, investors, and local community funds.
+
+### 2. Python Engine Tokenization Gateway (Core Logic)
+
+```python
+# =====================================================================
+# ARTE-NET TOKENIZATION ENGINE (SIMULATED GATEWAY CORE)
+# Protocol: Decentralized Cultural Fractional Ownership
+# =====================================================================
+
+class ArtTokenizationGateway:
+    def __init__(self, artwork_id: str, title: str, total_valuation_eur: float):
+        self.artwork_id = artwork_id
+        self.title = title
+        self.total_valuation = total_valuation_eur
+        self.total_tokens = 1000  # Fractionalized into 1,000 tokens
+        self.token_price = self.total_valuation / self.total_tokens
+        self.creator_royalty_pct = 0.10  # 10% royalty on secondary sales
+        self.community_fund_pct = 0.05   # 5% to local municipal cultural fund
+
+    def mint_fractional_tokens(self) -> dict:
+        """Mints fractional tokens representing physical art escrowed in the hub."""
+        return {
+            "artwork_id": self.artwork_id,
+            "title": self.title,
+            "total_tokens_minted": self.total_tokens,
+            "price_per_token_eur": self.token_price,
+            "blockchain_standard": "ERC-3643 / Compliant RWA Standard",
+            "status": "Escrowed & Live on ARTE-NET"
+        }
+
+    def process_secondary_sale(self, token_amount: int, sale_price_eur: float) -> dict:
+        """Automates revenue redistribution upon secondary market auction."""
+        creator_fee = sale_price_eur * self.creator_royalty_pct
+        community_fee = sale_price_eur * self.community_fund_pct
+        investor_payout = sale_price_eur - (creator_fee + community_fee)
+
+        return {
+            "sale_price_eur": sale_price_eur,
+            "payout_to_investor": investor_payout,
+            "royalty_to_artist": creator_fee,
+            "reinvestment_in_community": community_fee,
+            "settlement": "Instant Automated Execution via Smart Contract"
+        }
+
+# Example Usage:
+gateway = ArtTokenizationGateway("ART-2026-001", "Sculptură Neolitică Modernă", 5000.0)
+print(gateway.mint_fractional_tokens())
+
 👉 GitHub Repository: arte-net-global/municipal-cultural-hub
 
 
